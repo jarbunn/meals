@@ -10,6 +10,7 @@ class MealsScreen extends StatelessWidget {
   @override
   Widget build(context) {
     Widget content = ListView.builder(
+      itemCount: meals.length,
       itemBuilder: (ctx, index) => Text(
         meals[index].title,
       ),
@@ -20,13 +21,19 @@ class MealsScreen extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text('uh oh... nothing here'),
+            Text(
+              'Uh oh... nothing here',
+              style: Theme.of(context)
+                  .textTheme
+                  .headlineLarge!
+                  .copyWith(color: Theme.of(context).colorScheme.onSurface),
+            ),
             const SizedBox(height: 16),
             Text(
               'Try selecting a different category',
               style: Theme.of(context)
                   .textTheme
-                  .headlineLarge!
+                  .bodySmall!
                   .copyWith(color: Theme.of(context).colorScheme.onSurface),
             ),
           ],
