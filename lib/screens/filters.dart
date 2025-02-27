@@ -123,7 +123,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                   .copyWith(color: Theme.of(context).colorScheme.onSurface),
             ),
             subtitle: Text(
-              'Only include vegan meals.',
+              'Only include vegan meals',
               style: Theme.of(context)
                   .textTheme
                   .labelMedium!
